@@ -8,7 +8,7 @@ export function MenuNav() {
   const [value] = useMenuNav();
 
   return (
-    <div className="flex flex-row w-full justify-content-around align-items-center MenuNav h-4rem">
+    <div className="flex flex-row w-full justify-content-around align-items-center MenuNav h-4rem py-4">
       {value.menuNav.menuItems.map(i =>
         <Button
           key={i.id}

@@ -7,28 +7,28 @@ export function useMenuNav(): UseCustomType {
 
   const menuNav: IMenuNav = {
     menuItems: [{
-      onClick: () => functions.navigate("../"),
+      onClick: () => functions.navigate("../Home"),
       name: "Inicio",
       icon: "pi pi-home",
-      link: "/",
+      link: "/home",
       id: 1
     }, {
-      onClick: () => functions.navigate("../characters"),
+      onClick: () => functions.navigate("../Characters"),
       name: "Personajes",
       icon: "pi pi-users",
-      link: "/characters",
+      link: "/Characters",
       id: 2
     }, {
-      onClick: () => functions.navigate("../locations"),
+      onClick: () => functions.navigate("../Locations"),
       name: "Localizaciones",
       icon: "pi pi-globe",
-      link: "/locations",
+      link: "/Locations",
       id: 3
     }, {
-      onClick: () => functions.navigate("../episodes"),
+      onClick: () => functions.navigate("../Episodes"),
       name: "Episodios",
       icon: "pi pi-video",
-      link: "/episodes",
+      link: "/Episodes",
       id: 4
     }, {
       onClick: () => functions.navigate("../"),

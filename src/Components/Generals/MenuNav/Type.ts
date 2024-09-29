@@ -10,3 +10,5 @@ export interface IMenuItem {
   link: string
   id: number
 }
+
+export type UseCustomType = [{ menuNav: IMenuNav }, {}, {}, {}]

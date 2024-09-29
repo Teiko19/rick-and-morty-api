@@ -5,31 +5,16 @@ import { Button } from "primereact/button";
 
 export function MenuNav() {
 
-  const [CONSTANTS, STATES, SET_STATES, FUNCTIONS] = useMenuNav();
+  const [value] = useMenuNav();
 
   return (
     <div className="flex flex-row w-full justify-content-around align-items-center MenuNav h-4rem">
-      <Button
-        icon="pi pi-home"
-        label="Inicio"
-        className="buttonMenuNav w-2"
-        onClick={() => { }} />
-      <Button
-        icon="pi pi-users"
-        label="Personajes"
-        className="buttonMenuNav w-2" />
-      <Button
-        icon="pi pi-globe"
-        label="Localizaciones"
-        className="buttonMenuNav w-2" />
-      <Button
-        icon="pi pi-video"
-        label="Episodios"
-        className="buttonMenuNav w-2" />
-      <Button
-        icon="pi pi-sign-out"
-        label="Cerrar Sesion"
-        className="buttonMenuNav w-2" />
-    </div>
-  )
+      {value.menuNav.menuItems.map(i =>
+        <Button
+          key={i.id}
+          icon={i.icon}
+          className="ButtonMenuNav w-2"
+          onClick={i.onClick}
+          label={i.name} />)}
+    </div>)
 }

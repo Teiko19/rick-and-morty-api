@@ -1,7 +1,7 @@
 import { ProgressSpinner } from "primereact/progressspinner";
 import { MenuNav } from "../../Components/Generals/MenuNav/MenuNav";
-import { getStoreLoader } from "../../Redux/Store";
 import { useSelector } from "react-redux";
+import { getStoreLoader } from "../../Utils/Redux/Store";
 
 
 export function Home() {

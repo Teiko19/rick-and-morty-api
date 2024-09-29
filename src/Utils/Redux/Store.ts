@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { LoaderSlice } from "./Slices/Loader/Loader";
+import { LoaderSlice } from "./Slice/Loader/Loader";
 
 export const store = configureStore({
   reducer: {

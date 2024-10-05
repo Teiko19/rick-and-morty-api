@@ -1,10 +1,19 @@
-/* index.css o App.css */
+/* Ajustes globales en un archivo CSS (p.ej., index.css o App.css) */
+html,
 body {
+  height: 100%;
+  /* Ocupar toda la altura disponible */
   margin: 0;
+  /* Eliminar márgenes predeterminados */
   padding: 0;
+  /* Eliminar paddings predeterminados */
+  overflow: hidden;
+  /* Evitar desplazamiento innecesario */
+}
+
+body {
   display: flex;
+  /* Usa flexbox para gestionar los contenedores */
   flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  background-color: #595958;
+  /* Alineación vertical */
 }

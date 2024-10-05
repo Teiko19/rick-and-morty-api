@@ -1,4 +1,4 @@
-export interface Character {
+export interface CharacterDTO {
   id: number,
   name: string,
   status: string,
@@ -9,7 +9,7 @@ export interface Character {
   created: string
 }
 
-export const initCharacter: Character = {
+export const initCharacter: CharacterDTO = {
   id: 0,
   name: '',
   status: '',

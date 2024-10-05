@@ -1,11 +1,11 @@
 import { gql, useQuery } from "@apollo/client";
 import { useDispatch } from "react-redux";
 import { setLoader } from "../Utils/Redux/Slice/Loader/Loader";
-import { Character } from "../Interfaces/Characters";
+import { CharacterDTO } from "../Interfaces/CharacterDTO";
 
 const dispatch = useDispatch();
 
-export function getCharacters(filter: Character | {} = {}, page: number = 1) {
+export function getCharactersList(filter: CharacterDTO | {} = {}, page: number = 1): Promise<CharacterDTO[]> {
   const info = `{count, pages, next, prev}`
   const result = `{id, name, status, species, type, gender, image, created}`
   const getCharacters = gql`query {
@@ -19,6 +19,6 @@ export function getCharacters(filter: Character | {} = {}, page: number = 1) {
     onError: () => dispatch(setLoader(false)),
   });
   loading && dispatch(setLoader(true));
-  if (error) return [];
+  if (error) return Promise.reject(error);
   return data ? data.characters.results : []
 }

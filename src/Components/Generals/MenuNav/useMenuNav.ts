@@ -6,6 +6,7 @@ export function useMenuNav(): UseCustomType {
   const [_, __, ___, functions] = useGeneralHook();
 
   const menuNav: IMenuNav = {
+    visible: false,
     menuItems: [{
       onClick: () => functions.navigate("../Home"),
       name: "Inicio",
@@ -30,14 +31,7 @@ export function useMenuNav(): UseCustomType {
       icon: "pi pi-video",
       link: "/Episodes",
       id: 4
-    }, {
-      onClick: () => functions.navigate("../"),
-      name: "Cerrar Sesion",
-      icon: "pi pi-sign-out",
-      link: "/",
-      id: 5
-    }],
-    visible: false
+    }]
   }
 
   return [

@@ -1,5 +1,19 @@
 @import 'primeflex/primeflex.scss';
 
-.buttonMain {
-  background-color: #202020;
+.container {
+  padding: 10px;
+  background-color: #e2e2e2;
+}
+
+.view-container {
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: #cccccc;
+  border-radius: 10px
+}
+
+.text-font {
+  font-family: monospace;
+  text-shadow: 2px 2px 2px #000000;
+  opacity: 0.8;
 }

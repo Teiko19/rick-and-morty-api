@@ -7,11 +7,13 @@ import { Episodes } from "../../../Views/Episodes/Episodes";
 
 export function RouterComponent() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/Home" replace />} /> {/* Redirect to Home but in other moment will be the login */}
-      <Route path="/Home" element={<Home />} />
-      <Route path="/Characters" element={<Characters />} />
-      <Route path="/Locations" element={<Locations />} />
-      <Route path="/Episodes" element={<Episodes />} />
-    </Routes>);
+    <div className="flex flex-column w-full h-full container">
+      <Routes>
+        <Route path="/" element={<Navigate to="/Home" replace />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Characters" element={<Characters />} />
+        <Route path="/Locations" element={<Locations />} />
+        <Route path="/Episodes" element={<Episodes />} />
+      </Routes>
+    </div>);
 }
